@@ -3,7 +3,6 @@
 A repo of all my *unfoldingWord.org* notes -- at least going forward from July 2020.
 
 # Links
-Clickup: https://app.clickup.com/8466374/v/b/6-44121785-2 and https://app.clickup.com/t/rtau68
 
 # History
 
