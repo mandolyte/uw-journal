@@ -8,6 +8,65 @@ Incorporating the new TSV parser package.
 
 Need to test tN 7col format.
 
+## 2021-08-23
+
+Today I need to "recover" and figure out where I am on this project. It has been a while!
+
+### Which files have I touched?
+
+1. there is the new package itself, which is on NPM `uw-tsv-parser v1.0.0-alpha.2`
+2. my branch is `feature-cn-788-impl-tsv-parser`
+3. this branch exists in `tc-create-app` and `datatable-translatable`
+
+There is a yalc script:
+```sh
+#!/bin/sh
+
+BRANCH="feature-cn-788-impl-tsv-parser"
+CURDIR=`pwd`
+PROJDIR=`basename $CURDIR`
+
+if [ "$PROJDIR" != "tc-create-app" ]
+then
+  echo "Script must be run from ./tc-create-app"
+  echo "found $PROJDIR"
+  exit
+fi
+
+echo Assumptions:
+echo All project folders are at same level
+echo All branch names for each project folder are the same 
+
+echo _________________________________
+echo Working on datatable-translatable
+echo
+cd ../datatable-translatable
+git checkout master
+git pull 
+git checkout $BRANCH
+yalc remove --all
+git pull
+yarn install
+yalc publish
+
+
+echo ________________________
+echo Working on tc-create-app
+echo
+cd ../tc-create-app
+echo First, remove any existing yalc links
+yalc remove --all
+git checkout develop
+git pull 
+
+yalc link datatable-translatable
+yarn install
+yarn start
+```
+
+### Test legacy tsv tN
+
+
 
 ## 2021-08-12
 
