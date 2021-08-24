@@ -6,7 +6,43 @@ Incorporating the new TSV parser package.
 - ~~twl works (both checked)~~
 **NOTE!**: must check that round trips work... so retest!
 
-Need to test tN 7col format.
+## 2021-08-24
+
+### Test legacy tsv tN
+
+In QA DCS, in `unfoldingWord/en_tn`:
+
+Step 1. Delete my branch `cecil.new-tc-create-1`
+Step 2. Edit the tN with tc-create (creating my branch)
+Step 4. Switch to my branch in DCS and click "New Pull Request"
+![[Pasted image 20210824072548.png]]
+Step 5. On the PR page, you can see the differences. You can also use various compare options to compare. 
+- In my case, there were two notes that came back with changes. If I chose to ignore whitespace the second change at the end of file went away. I compared using vs-code and discovered that my branch file had a newline at the end of the last line and this was the difference.
+- The first change was the one expected. Plus three consequtive `<br>` elements were reduced to two occurrences. I think this is OK and was probably done in the HTML to MD conversion.
+
+Conclusion: Looks good.
+
+### Test 7 Column tsv tN
+
+In QA DCS:
+
+Step 1. Follow the steps to create a new org, fork tN to it, and merge the newFormat branch into master. See below.
+Step 2. Delete my branch if it exists
+Step 3. Login after substituting the fake en_tn repo and recompiling
+Step 4. Select fake org "test_tn_7col_format"
+Step 5. Select tN (now from the fake org)
+Step 6. Select language
+Step 7. Select book of Jude
+Step 8. Make a change ("Introduction" to "Intro" in the first note.)
+Step 9. Save it
+Step 10. In QA DCS repo, switch to my newly created branch
+Step 11. Select the file (tn_Jud.tsv in my case)
+Step 12. Click "History" button
+Step 13. Click your change (should be the latest, at the top of the list)
+Step 14. The next screen is a side by side compare
+Step 15. Verify changes
+
+Conclusion: Looks good.
 
 ## 2021-08-23
 
@@ -63,8 +99,6 @@ yalc link datatable-translatable
 yarn install
 yarn start
 ```
-
-### Test legacy tsv tN
 
 
 
