@@ -61,3 +61,15 @@ $ cd my-app
 $ yarn dev
 ```
 which then on http://localhost:3000 showed a simple output page.
+
+## Project Templates for Next.js
+
+Video: https://www.youtube.com/watch?v=UoERAHHpuVI
+Here are the two main findings:
+- Vercel's templates ("examples"): https://github.com/vercel/next.js/tree/canary/examples
+- Syntax:
+```
+$ npx create-next-app --example template-name my-project-name
+```
+- There was no mention in this brief video about creating our own "examples". The `create-next-app` only works with Vercel's (there are a lot of them).
+
