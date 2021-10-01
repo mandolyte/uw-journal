@@ -1,5 +1,6 @@
 # uW Content Validation
 
+
 ## 2021-02-01
 Worked on PR [140](https://github.com/unfoldingWord/uw-content-validation/pull/140)
 
