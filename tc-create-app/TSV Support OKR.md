@@ -1,5 +1,55 @@
 # TSV Support OKR
 
+## 2021-10-12 "all tsv" branch merged... test!
+- Testing with: https://develop--tc-create-app.netlify.app/
+- For each resource type, first remove my branch from QA DCS (for example, https://qa.door43.org/unfoldingWord/en_tn/branches).
+- Use TIT to test
+
+NOTE: after the fix to tn, testing locally
+
+- twl: worked, cv worked (no errors); lots of debug output so I file an issue at https://github.com/unfoldingWord/uw-content-validation/issues/224.
+- tn: was hanging; fixed and made PR
+- tq: worked, cv worked (no errors found)
+- sq: worked, cv worked (no errors found)
+- sn: worked, cv worked (no errors found)
+- obs-tq: worked, cv worked (no errors found)
+- obs-tn: worked, cv worked with errors found. I reported them on zulip [here](https://unfoldingword.zulipchat.com/#narrow/stream/214041-CONTENT--.20UR/topic/OBS.20TSV.20Migration/near/257378508)
+- obs-sn: worked, but row header is missing; asked Elsy to confirm and write an issue for it; also saw a lot of debug messages and left RH an issue for that
+- obs-sq: 
+
+## 2021-10-11 Test Each TSV resource
+
+### As an editor (Use `unfoldingWord` Org)
+- TN (9 col) - fails with "incomingTable.map is not a function"; should avoid using tsv parser with old 9 col format. Let the old code run as-is. Done. Now works. CV works.
+- TWL - works with master branch of datatable-translatable, but not with what is in NPM; cv works
+- TQ - works; cv works; **asked @elsy about missing scripture pane**
+- SQ - works; cv works
+- SN - works; cv works
+- OBS-TQ - after removing resource context from scripture-resources-rcl, it works.
+- OBS-TN - 
+
+
+https://qa.door43.org/api/v1/repos/unfoldingWord/en_obs-tq/contents/tq_OBS.tsv
+
+## 2021-10-11 Add obs-tq
+
+Copied the Bible TQ files:
+```
+$ cp TranslatableTqTSV.js TranslatableObsTqTSV.js
+$ cp RowHeaderTq.js RowHeaderObsTq.js
+```
+
+*update RowHeaderzObsTq:*
+- all RowHeaderTq to RowHeaderObsTq
+
+*update TranslatableObsTq:*
+- all RowHeaderTq to RowHeaderObsTq
+- all "TqTSV" to "ObsTqTSV"
+
+*update Translatable.js*
+- add file name pattern
+- add imports
+
 ## 2021-10-11 Create an "all tsv branch"
 
 Today, I plan to merge all the TSV work into a single branch. This is getting a bit fragmented and very confusing.
@@ -107,6 +157,19 @@ Results:
 - My local branch for 1031 had un-pushed commits; so I pushed them
 - Lots of changes in this branch, including passing of validate options... good.
 
+**Summary**
+The new branch has the following TSV resources:
+- TWL
+- TN 9 col ("TSV")
+- TQ
+- TN 7 col
+- SQ 
+- SN
+- obs-tn
+- obs-sq
+- obs-sn
+
+Missing is obs-tq
 
 
 
