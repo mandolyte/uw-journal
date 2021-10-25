@@ -7,6 +7,8 @@ At present the issue has a number of links to articles on infinite scrolling, pr
 
 I also have a suggestion that JoelC do a proof of concept (see appendix B).
 
+Wondered if an unbounded dataset was possible... (see appendix C).
+
 
 ## 2021-10-25
 
@@ -55,3 +57,11 @@ https://mui.com/components/data-grid/rows/#infinite-loading
 
 Both using the [MUI data-grid component](https://mui.com/components/data-grid/rows/#infinite-loading); and both synced on scroll and some provision to sync on demand (in the case where they scroll manually to some location and need to "re-center", if you will)
 
+# Appendix C - unbounded datasets
+
+The goals would be to minimize overhead of rendered data and make the amount of data available essentially unbounded. This means the DOM would be constantly updated as it scrolled, rendering the rows on the fly; enough to fill the display space plus perhaps one row overflow at top and bottom (outside the view port).
+
+- First, there is a data source defined by an interface. So that whether the data is actually stored in-memory, in indexedDB, proskomma, then a function, say getRow(n), will get the nth row of data.
+- Second, the UI has "callbacks" that will fire when a row scrolls out of view or into view. The callbacks would reconstruct the viewport on they fly. In other words, the viewport and the rendered data are nearly the same.
+- Third, no pagination... the user can scroll wherever they wish (and then sync back up with the below feature)
+- Fourth, *must* support the "scroll to view" function so that multiple tables can be synced with each other
