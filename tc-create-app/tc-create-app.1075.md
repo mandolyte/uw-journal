@@ -8,8 +8,24 @@ At present the issue has a number of links to articles on infinite scrolling, pr
 I also have a suggestion that JoelC do a proof of concept (see appendix B).
 
 
+## 2021-10-25
 
+Articles on a JS function named "scroll to view":
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+- https://stackoverflow.com/questions/5007530/how-do-i-scroll-to-an-element-using-javascript
+- https://www.w3schools.com/jsref/met_element_scrollintoview.asp
+- Example: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_scrollintoview
 
+Questions:
+1. Will this work with a MUI datatable?
+2. Will this work with pagination turned on?
+
+*Links to Table Components:*
+- https://flatlogic.com/blog/top-19-remarkable-javascript-table-libraries-and-plugins/#five
+- https://bvaughn.github.io/react-virtualized/#/components/Grid
+- https://wpdatatables.com/javascript-data-table/
+- https://griddlegriddle.github.io/Griddle/
+- 
 
 
 
