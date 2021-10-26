@@ -9,6 +9,14 @@ I also have a suggestion that JoelC do a proof of concept (see appendix B).
 
 Wondered if an unbounded dataset was possible... (see appendix C).
 
+## 2021-10-26
+
+To answer questions raised yesterday, namely:
+1. Will this work with a MUI datatable?
+2. Will this work with pagination turned on?
+
+Let's try to use the Styleguidist demo for datatable-translatable to find out...
+
 
 ## 2021-10-25
 
@@ -27,7 +35,7 @@ Questions:
 - https://bvaughn.github.io/react-virtualized/#/components/Grid
 - https://wpdatatables.com/javascript-data-table/
 - https://griddlegriddle.github.io/Griddle/
-- 
+- https://react-table.tanstack.com/ (recommended by Manny)
 
 
 
