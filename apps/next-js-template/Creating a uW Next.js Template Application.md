@@ -1,5 +1,11 @@
 # Creating a uW Next.js Template Application
 
+## History
+
+This file started out before we began work on the template. Now it exists in box3 [here](https://github.com/unfoldingWord-box3/next-js-template)
+
+Have moved this file to a folder named after the repo.
+
 ## Links
 
 Some history:
@@ -11,7 +17,25 @@ https://app.clickup.com/t/6f6mdz
 Figma Mockups:
 https://www.figma.com/file/yTcdc2Shb0rwaDlxD11zU8/tcCreate-BPF?node-id=2%3A4141
 
-## 2021-10-21
+## 2021-11-01
+
+As of today, login and an arrangement of text on paper objects are shown.
+
+I self assigned issue 14 to create a uW image card.
+
+*Task 1.* find a vector form of the uW logo. There is an eps format and Chrome can handle it.
+
+*Task 2.* Create a repo for this "RCL" (React Component Library) in box3. Do this by "forking" the translation-helps-rcl. Let's call it: uw-card-rcl.
+
+*Task 3.* Trim out everything except what is required for the "card" component.
+
+*Task 4.* Modify the card component to take, as a parameter, its content.
+
+*Task 5.* Create some demos for it. At least these:
+- Take the uW logo as content and let the logo resize as the card is resized.
+- Take some Material-UI text (Typography component) and let the text re-flow as the card is resized.
+
+
 
 
 ## 2021-10-18

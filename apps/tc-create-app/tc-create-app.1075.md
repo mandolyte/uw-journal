@@ -17,6 +17,13 @@ To answer questions raised yesterday, namely:
 
 Let's try to use the Styleguidist demo for datatable-translatable to find out...
 
+from: https://stackoverflow.com/questions/635706/how-to-scroll-to-an-element-inside-a-div
+```javascript
+var myElement = document.getElementById('element_within_div');
+var topPos = myElement.offsetTop;
+```
+
+See demo code appendix Z.
 
 ## 2021-10-25
 
@@ -73,3 +80,4 @@ The goals would be to minimize overhead of rendered data and make the amount of 
 - Second, the UI has "callbacks" that will fire when a row scrolls out of view or into view. The callbacks would reconstruct the viewport on they fly. In other words, the viewport and the rendered data are nearly the same.
 - Third, no pagination... the user can scroll wherever they wish (and then sync back up with the below feature)
 - Fourth, *must* support the "scroll to view" function so that multiple tables can be synced with each other
+

@@ -3,7 +3,7 @@ This records notes about Next.js learnings...
 
 ## 2021-10-06
 
-Notes on creating a Next.js application template for uW will be in [here](./Creating%20a%20uW%20Next.js%20Template%20Application)
+Notes on creating a Next.js application template for uW will be in [here](Creating%20a%20uW%20Next.js%20Template%20Application.md)
 
 ## 2021-08-31
 
