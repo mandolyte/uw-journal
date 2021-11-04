@@ -1,7 +1,24 @@
 # Understanding React-Grid-Layout
+
+Note that this react component is explored largely via its use in the unfoldingWord RCL `resource-workspace-rcl`.
+
+## Status
+
+This document currently has the following outstanding needs:
+- What are `layoutWidths` and `layoutHeights` ? when should they be used? are they required?
+- What are `minW` and `minH`? when should they be used? required?
+- What does `rows` do? when should it be used?
+- What does `totalGridUnits` do? when should it be used?
+- What does `rowHeight` do? when should it be used?
+- What is the unit of measure for `gridMargin`?
+- What is the unit of measure for `correctHeight`?
+- What does `columns` do? When should it be used? How is it different from `breakpoints`?
+- What does `breakpoints` do? When should it be used? How is it different from `columns`?
+
 ## Links
 - Link to the demos: https://strml.github.io/react-grid-layout/examples/1-basic.html
 - Link to the "showcase": https://strml.github.io/react-grid-layout/examples/0-showcase.html (this has few restrictions of moving and sizing)
+- Link to Styleguidist documentation for `resource-workspace-rcl`: https://resource-workspace.netlify.app/
 
 
 ## breakpoint
@@ -43,13 +60,54 @@ This layout only provides placements for a large ("lg") screen size.
 
 A *layout* is an object of breakpoint names, which have an array of objects, one per child component, with positioning information, namely (using the breakpoints above):
 
-- "w": the width in number of columns to take up (0 to 8 for the "lg" example above)
-- "h": the height in number of rows, which is inferred from the max "y" coordinate in the layout.
+- "w": the width in number of columns to take up (1 to 8 for the "lg" example above)
+- "h": the height in number of rows, which is inferred from the max "y" coordinate in the layout (*is this true?*)
 - - "x": the horizontal coordinate. Zero based. Starting from left side of the container.
 	- A number from 0 to 8 for the "large" (lg) 
 - "y": the vertical coordinate. Zero based. Starting from the top of the container.
 - "i": the unique number for the component. In the above, it goes from "1" to "5" (strings, not numbers).
 - "static": this is optional and defaults to false. If set to true, then that child component cannot be moved or resized.
+
+Consider the layout used [here](https://resource-workspace.netlify.app/#!/Workspace/1):
+
+```js
+const layout = {
+  lg: [
+    {"w":6,"h":1,"x":0,"y":0,"i":"1"},
+    {"w":6,"h":1,"x":6,"y":2,"i":"2"},
+    {"w":6,"h":1,"x":0,"y":2,"i":"3"},
+    {"w":6,"h":1,"x":6,"y":0,"i":"4"},
+    {"w":12,"h":1,"x":0,"y":1,"i":"5"},
+  ]
+};
+```
+In this layout there are 5 components and only an inferred breakpoint named "lg". The components are laid out in order of appearance. Therefore:
+- Component 1 will be positioned at first at the top at (0,0) and will take up 6 columns.
+- Component 4 will be positioned next. Even tho the x,y location is specified to be (6,0), it will fill the entire space since it has width 6. In other words x is overriden to be 0.
+- Component 5 is next with x,y of (0,1). Even tho the y coordinate is 1, it is forced to y=2 in order to make room for components 1 and 4. *I do not understand why the width of 12 is essentially ignored. Some testing show that the screen has only six columns.*
+- Component 2 is next with x,y of (6,2). Since its width is 6, it fills the space. Since it must make room for the other components already positioned, it is forced to y=3. Thus its effective x,y is (0,3).
+- Component 3 is last, filling the space since width is 6. Since it must make room for the other components placed, its effective x,y is (0,4).
+
+This behavior leads to these observations:
+1. The layout of components is only a suggestion, since...
+2. Components are not permitted to obscure one another
+3. Components will always be full visible in the parent container
+4. Component placement is prioritized per the order in the layout breakpoint array
+
+Consider this rather extreme example. Here the components all have width 2 (I would have used 1, but then the text bleeds outside the cards). All have height 1. All are positioned at (0,0) in the top left corner.
+```
+const layout = {
+  lg: [
+    {"w":2,"h":1,"x":0,"y":0,"i":"1"},
+    {"w":2,"h":1,"x":0,"y":0,"i":"2"},
+    {"w":2,"h":1,"x":0,"y":0,"i":"3"},
+    {"w":2,"h":1,"x":0,"y":0,"i":"4"},
+    {"w":2,"h":1,"x":0,"y":0,"i":"5"},
+  ]
+};
+```
+Here is the result:
+![Pasted image 20211104090327.png](../images/Pasted%20image%2020211104090327.png)
 
 ## layoutWidths and layoutHeights
 The documentation says these are arrays of arrays of numbers.
@@ -58,9 +116,7 @@ Example:
 const layoutWidths = [[1, 1], [1, 1], [1]];
 ```
 
-Perhaps these arrays determine how many children can fit into each row?
-
-No idea how LayoutHeights might be used...
+It is not known what these are used for, nor if they are needed.
 
 ## minH and minW
 
