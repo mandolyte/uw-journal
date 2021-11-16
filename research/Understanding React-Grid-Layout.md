@@ -118,6 +118,8 @@ const layoutWidths = [[1, 1], [1, 1], [1]];
 
 It is not known what these are used for, nor if they are needed.
 
+*I have discovered that the two must have the same number of rows.*
+
 ## minH and minW
 
 The component properties says these are numbers, but no other info is provided.
