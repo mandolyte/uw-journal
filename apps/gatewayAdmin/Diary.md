@@ -1,5 +1,31 @@
 # Diary
 
+## 2021-12-08 Bugs in Add Book Impl
+
+Yesterday, I created in QA DCS an new org called `eo_gl` (Esperanto). I then created two repos: en_gst and en_glt (language code `eo` is not showing in language list.)
+
+**BUGS**
+- Language codes are not downselected to what is available in the org.
+- Whereas at this moment, when I view `https://qa.door43.org/eo_gl` only the two repos I created yesterday are showing, the admin app seems to think that TN, TW, and TQ are also OK. Even showing/implying that "Ruth" is available in them!? (see snippet below)
+- Both TW and TA are showing the status "Fetch Error" - should be "Repo not found"
+- Need to implement a way to view the error if the "view" icon button is clicked.
+- In the card for Titus, it shows that the entry is in the manifest... probably because it is the default. Need to add the entry of the card's book into the manifest before creating it.
+
+![[Pasted image 20211208075829.png]]
+
+
+
+## 2021-12-07
+
+How to make an "icon button":
+```js
+<Tooltip title="Validate">
+  <IconButton className={classes.iconButton} onClick={onValidate} aria-label="Validate">
+    <PlaylistAddCheck />
+  </IconButton>
+</Tooltip>
+```
+
 ## 2021-11-17 TA Approach
 
 The TA articles are in the support reference column of the tN TSV file. At present there are two flavors of this TSV: a 9 column legacy and a new 7 column version. The pattern of the filename will reveal which it is. Not every translation note has a support reference. 
