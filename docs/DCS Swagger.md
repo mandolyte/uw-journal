@@ -11,6 +11,9 @@ https://qa.door43.org/api/catalog/swagger#/v5
 This:
 https://qa.door43.org/api/v1/orgs/unfoldingword
 
+https://qa.door43.org/api/v1/orgs/eo_gl
+
+
 returns:
 ```json
 {
