@@ -1,5 +1,21 @@
 # Diary
 
+## 2021-12-10 Card Refresh on Org/Lang Change
+
+Here is org eo_gl with only one repo, en_glt created.
+![[Pasted image 20211210075426.png]]
+
+Now switch to es-419_gl:
+![[Pasted image 20211210075623.png]]
+
+The status values are the same... so the card is NOT refreshing as it should.
+
+If I logout and log back in, doesn't help.
+
+If I do a page refresh, which takes me back to the login page, then it works:
+![[Pasted image 20211210080103.png]]
+
+
 ## 2021-12-08 Bugs in Add Book Impl
 
 Yesterday, I created in QA DCS an new org called `eo_gl` (Esperanto). I then created two repos: en_gst and en_glt (language code `eo` is not showing in language list.)
