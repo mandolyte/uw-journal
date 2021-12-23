@@ -16,11 +16,11 @@ using DEVELOP url:
 1. turned off wifi *On win10, I went into Airplane Mode*
 1. close
 	- clicked the "x", I got a popup warning that my changes are not saved *done*
-	- ![](Pasted%20image%2020211223082241.png)
+	- ![](./images/Pasted%20image%2020211223082241.png)
 	- clicked cancel on popup *done*
 	- tried to save *done*
 	- got popup saying that changes could not be saved *done*
-	- ![](Pasted%20image%2020211223082331.png)
+	- ![](./imagesPasted%20image%2020211223082331.png)
 	- The save button was deactivated at this point *done*
 1. Turned wifi back on *done*
 1. refreshed page and it returned to logon page *done*
