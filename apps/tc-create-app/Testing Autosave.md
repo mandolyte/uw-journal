@@ -20,7 +20,7 @@ using DEVELOP url:
 	- clicked cancel on popup *done*
 	- tried to save *done*
 	- got popup saying that changes could not be saved *done*
-	- ![](./imagesPasted%20image%2020211223082331.png)
+	- ![](./images/Pasted%20image%2020211223082331.png)
 	- The save button was deactivated at this point *done*
 1. Turned wifi back on *done*
 1. refreshed page and it returned to logon page *done*
