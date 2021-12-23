@@ -16,11 +16,11 @@ using DEVELOP url:
 1. turned off wifi *On win10, I went into Airplane Mode*
 1. close
 	- clicked the "x", I got a popup warning that my changes are not saved *done*
-	- ![[Pasted image 20211223082241.png]]
+	- ![](Pasted%20image%2020211223082241.png)
 	- clicked cancel on popup *done*
 	- tried to save *done*
 	- got popup saying that changes could not be saved *done*
-	- ![[Pasted image 20211223082331.png]]
+	- ![](Pasted%20image%2020211223082331.png)
 	- The save button was deactivated at this point *done*
 1. Turned wifi back on *done*
 1. refreshed page and it returned to logon page *done*
@@ -50,17 +50,19 @@ VERIFY: the auto-save content is there *Verified... but the content shown could 
 Scenario 3: 
 DCS USER BRANCH CHANGED (IN "ANOTHER SESSION" - simulated by editing directly on DCS)
 
-using DEVELOP url:
+using DEVELOP url: 
+*I used a different computer to make the change.*
 
-1. logged in with org unfoldingWord and resource tN and language English
-1. selected book of Jude
-1. made an edit and saved it
-2. close tC Create
-1. went to QA DCS and edited the same file -- in the USER'S BRANCH.
+1. logged in with org unfoldingWord and resource tN and language English *done*
+1. selected book of Jude *done*
+1. made an edit and saved it *done*
+2. close tC Create *done*
+1. went to QA DCS and edited the same file -- in the USER'S BRANCH. *used a different computer to make the change*
 1. open tC Create; open the same file:
 
 
 VERIFY: the app prompts you to DISCARD or KEEP the autosaved file.
+**It did not prompt to discard or keep. It simply went to the latest file in my branch which I had changed on the other computer**
 
 1. Discard: The file is closed. VERIFY: open the file again and it should show your server content.
 1. --OR-- Keep.  Then edit and save your file in tC Create.  Then open tC Create and open the same file.  VERIFY: the newly saved content is shown.
@@ -73,14 +75,14 @@ TWO FILES
 
 using DEVELOP url:
 
-1. logged in with org unfoldingWord and resource tN and language English
-1. selected book of 1 JN
-1. made an edit ... DO NOT SAVE
-1. select book of 2 JN
-	VERIFY: 2 JN looks OK
-1. make an edit .... SAVE 2 JN
-1. selected book of 1 JN
-	VERIFY: prior auto-save content for 1 JN is correct.
+1. logged in with org unfoldingWord and resource tN and language English *done*
+1. selected book of 1 JN *done*
+1. made an edit ... DO NOT SAVE 
+1. select book of 2 JN *after choosing 2JN from nav drawer, I receive a prompt: ![](./images/Pasted%20image%2020211223085954.png) I clicked OK to proceed to 2JN.*
+	VERIFY: 2 JN looks OK *verified... 2JN came up ok.*
+1. make an edit .... SAVE 2 JN *done*
+1. selected book of 1 JN *done*
+	VERIFY: prior auto-save content for 1 JN is correct. *Verified: my change is there.*
 
 
 .
