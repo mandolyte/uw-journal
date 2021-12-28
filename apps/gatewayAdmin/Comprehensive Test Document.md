@@ -45,7 +45,7 @@ On the Titus card, click the Add book action.
 Add another book, say, Psalms; click to add it to the manifest.
 
 Expected result on server:
-- All three books will be in the manifest and will be sorted in bible order. **this is failing probably because after the first update to add Ruth, the SHA value is now changed. Probably should re-generate the repo tree when any files are updated**
+- All three books will be in the manifest and will be sorted in bible order. 
 
 Expected result on client:
 - all three cards will show "File not found" and the action tooltip saying "Use tC Create to create file".
