@@ -50,16 +50,42 @@ Expected result on server:
 Expected result on client:
 - all three cards will show "File not found" and the action tooltip saying "Use tC Create to create file".
 
-## Test 5 - all resources and manifests
-In this test, create all repos for all resource types and add at least one book to the manifest.
+## Test 5 - All scripture resources and manifests
+In this test, create all repos for all scripture resource types and add at least one book to the manifest. 
+
+Expected result on server:
+- All repos created and manifests are valid
+- NOTE: if a book is not added to the manifest, it will have the Invalid sticker applied to it.
+
+Expected result on client:
+- Statuses and actions are appropriate, namely, book missing in the manifest or file not found (depending on whether a book was added)
+
+## Test 6 - TA and TW resources and manifests
+In this test, create repos for Translation Academy and Translation Words. 
 
 Expected result on server:
 - All repos created and manifests are valid
 
 Expected result on client:
-- All statuses and actions are appropriate, namely, book missing in the manifest or file not found (depending on whether a book was added)
+- The status will read "See TWL error" and "See TN error", respectively.
+- The action icon will be the "blocked" icon.
+- The tooltip will read either "Use tC Create to create translation word list" for TWL or "Use tC Create to create translation notes" for TA.
 
-## Test 6 - Add a missing manifest
+
+## Test 7 - All OBS resources and manifests
+In this test, create all repos for all resource types. Since OBS resources only have a single file, the manifest will be created with that single file.
+
+Expected result on server:
+- All repos created and manifests are valid.
+
+Expected result on client:
+- All statuses will state "file not found".
+- The view action tooltip will state Use tC Create to
+
+Actual (2021-12-29): OBS shares TA and TW with scripture. However, it is not picking up the existence of the two repos. It will let me click the "create repo" icon button, but nothing changes.
+
+
+## Test 7 - Add a missing manifest
 To one of the repos, 
 - delete the manifest.
 - create the manifest.
