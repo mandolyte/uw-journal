@@ -49,3 +49,28 @@ Expected result on server:
 
 Expected result on client:
 - all three cards will show "File not found" and the action tooltip saying "Use tC Create to create file".
+
+## Test 5 - all resources and manifests
+In this test, create all repos for all resource types and add at least one book to the manifest.
+
+Expected result on server:
+- All repos created and manifests are valid
+
+Expected result on client:
+- All statuses and actions are appropriate, namely, book missing in the manifest or file not found (depending on whether a book was added)
+
+## Test 6 - Add a missing manifest
+To one of the repos, 
+- delete the manifest.
+- create the manifest.
+
+Expected result on server:
+- manifest will be created with no books in the projects
+
+Expected result on client:
+- status will state that manifest is missing
+- action offered will be to create the manifest
+
+
+
+
