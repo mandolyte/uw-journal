@@ -63,3 +63,44 @@ export default function App() {
 
 Sandbox link
 https://obehi0.csb.app/
+
+
+## Object dependency
+
+Use the code below to show the same principles using objects.
+
+```js
+import "./styles.css";
+import React, { useState, useEffect } from "react";
+export default function App() {
+  const [count, setCount] = useState(0);
+  const [obj, setObj] = useState({});
+
+  const handleClick = () => {
+    // The commented line does not work, since
+    // the value of newobj is a pointer to
+    // the same place as obj. I.e., unchanged
+    // whereas using Object.assign() will
+    // make a new copy at a new location.
+    // let newobj = obj;
+    let newobj = Object.assign({}, obj);
+    newobj[`key${count}`] = `val${count}`;
+    setObj(newobj);
+  };
+
+  useEffect(() => {
+    const keys = Object.keys(obj);
+    setCount(keys.length);
+  }, [obj, count]);
+
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+
+      <p>You clicked {count} times</p>
+      <button onClick={() => handleClick()}>Click me</button>
+    </div>
+  );
+}
+```
