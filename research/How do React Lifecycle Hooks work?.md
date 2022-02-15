@@ -104,3 +104,9 @@ export default function App() {
   );
 }
 ```
+
+## References
+
+Per React docs, comparisons are done via the JavaScript Object.is() function. See [here](https://reactjs.org/docs/hooks-reference.html#bailing-out-of-a-dispatch)
+
+And [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is#description) is documentation on Object.is().
