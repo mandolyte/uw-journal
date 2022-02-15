@@ -1,4 +1,14 @@
 # Comprehensive Test Document
+
+**DEPRECATED** now in source repo root as TESTING.md.
+
+
+
+
+
+
+
+
 This document is intended to describe a comprehensive test for gateway-admin.
 
 ## Test Pre-requisites
@@ -73,7 +83,7 @@ Expected result on client:
 
 
 ## Test 7 - All OBS resources and manifests
-In this test, create all repos for all resource types. Since OBS resources only have a single file, the manifest will be created with that single file.
+In this test, create OBS repos for all resource types. Since OBS resources only have a single file, the manifest will be created with that single file.
 
 Expected result on server:
 - All repos created and manifests are valid.
@@ -82,10 +92,7 @@ Expected result on client:
 - All statuses will state "file not found".
 - The view action tooltip will state Use tC Create to
 
-Actual (2021-12-29): OBS shares TA and TW with scripture. However, it is not picking up the existence of the two repos. It will let me click the "create repo" icon button, but nothing changes.
-
-
-## Test 7 - Add a missing manifest
+## Test 8 - Add a missing manifest
 To one of the repos, 
 - delete the manifest.
 - create the manifest.
