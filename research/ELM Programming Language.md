@@ -8,8 +8,9 @@
 - Online playground: https://elm-lang.org/try
 - Slack: https://elmlang.slack.com
 - Package Manager: https://package.elm-lang.org/
+- Documentation: https://package.elm-lang.org/packages
 - Youtube playlist: https://www.youtube.com/playlist?list=PL-cYi7I913S-VgTSUKWhrUkReM_vMNQxG
-- 
+- The Elm Oracle: https://klaftertief.github.io/elm-search/
 
 # Objectives
 1. What is elm like as a language? what can we learn from it?
@@ -18,6 +19,101 @@
 4. Community support (see slack)
 
 # Diary
+
+## 2022-02-23
+
+**On Decoders:**
+https://app.slack.com/client/T0CJ5UNHK/C192T0Q1E/thread/C192T0Q1E-1645573299.146689
+
+
+
+## 2022-02-22
+
+**On forms** https://guide.elm-lang.org/architecture/forms.html
+On how to begin a model:
+I always start out by guessing at the Model. We know there are going to be three text fields, so let's just go with that:
+
+type alias Model =
+  { name : String
+  , password : String
+  , passwordAgain : String
+  }
+I usually try to start with a minimal model, maybe with just one field. I then attempt to write the view and update functions. That often reveals that I need to add more to my Model. Building the model gradually like this means I can have a working program through the development process. It may not have all the features yet, but it is getting there!
+
+**HTML elements are functions!**
+The neat thing about HTML in Elm is that input and div are just normal functions. They take (1) a list of attributes and (2) a list of child nodes. Since we are using normal Elm functions, we have the full power of Elm to help us build our views! We can refactor repetitive code out into customized helper functions. That is exactly what we are doing here!
+
+So our view function has three calls to viewInput:
+```elm
+viewInput : String -> String -> String -> (String -> msg) -> Html msg
+viewInput t p v toMsg =
+  input [ type_ t, placeholder p, value v, onInput toMsg ] []
+This means that writing viewInput "text" "Name" "Bill" Name in Elm would turn into an HTML value like <input type="text" placeholder="Name" value="Bill"> when shown on screen.
+```
+
+**Functions with multiple arguments**
+Note: Functions that take multiple arguments end up having more and more arrows. For example, here is a function that takes two arguments:
+
+```elm
+> String.repeat
+<function> : Int -> String -> String
+
+
+>  
+```
+Giving two arguments like String.repeat 3 "ha" will produce "hahaha". It works to think of -> as a weird way to separate arguments, but I explain the real reasoning [here](https://guide.elm-lang.org/appendix/function_types.html). It is pretty neat! Namely:
+	
+	So conceptually, every function accepts one argument. It may return another function that accepts one argument. Etc. At some point it will stop returning functions.
+	
+Maybe
+As you work more with Elm, you will start seeing the Maybe type quite frequently. It is defined like this:
+```
+type Maybe a
+  = Just a
+  | Nothing
+```
+
+Using:
+```
+> String.toFloat
+<function> : String -> Maybe Float
+> String.toFloat "3.14"
+Just 3.14 : Maybe Float
+> String.toFloat "hello"
+Nothing : Maybe Float
+```
+
+- As the "type" of the function, String.toFloat returns the type "Maybe Float".
+- When used, it returns the converted *value* or it returns "Nothing".
+
+Thus:
+```elm
+String.toFloat "3.14"
+-- returns Just 3.14
+-- and 
+String.toFloat "hello"
+-- returns Nothing
+-- then pattern matching can be done thusly:
+view model =
+  case String.toFloat model.input of
+    Just celsius ->
+      viewConverter model.input "blue" (String.fromFloat (celsius * 1.8 + 32))
+
+    Nothing ->
+      viewConverter model.input "red" "???"
+```
+
+**Managing and Installing packages**
+There are tons of other packages on package.elm-lang.org though! So when you are making your own Elm programs locally, it will probably involve running some commands like this in the terminal:
+```
+elm init
+elm install elm/http
+elm install elm/random
+```
+That would set up an elm.json file with elm/http and elm/random as dependencies.
+
+
+
 
 ## 2022-02-21
 
