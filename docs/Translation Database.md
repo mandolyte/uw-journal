@@ -10,3 +10,6 @@ With the above, I was able to change the lang code for Kannada from the three-ch
 
 Note: my account name is `ceciln`. Password is in bitwarden. The account is for `unfoldingword.org`:
 ![[Pasted image 20210721094027.png]]
+
+SIL language data source:
+https://github.com/silnrsi/langtags/blob/master/doc/langtags.md
