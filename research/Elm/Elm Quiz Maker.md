@@ -19,6 +19,65 @@ Ellie working with a single question:
 https://ellie-app.com/gPQJXSCd4cca1
 
 Not working: https://ellie-app.com/gPS8B8q93p2a1
+Not working: https://ellie-app.com/gPXmLqmnqKva1
+
+
+```
+> type UserId = UserId String
+> x = UserId "whats up"
+UserId ("whats up") : UserId
+> type UserId = UserId String
+> x = UserId "whats up"
+UserId ("whats up") : UserId
+> y = toString (UserId ) = idString
+[1]+  Stopped                 elm repl
+$ fg
+elm repl
+
+|   
+-- UNEXPECTED EQUALS ------------------------------------------------------ REPL
+
+I was not expecting to see this equals sign:
+
+3| y = toString (UserId ) = idString
+                          ^
+Maybe you want == instead? To check if two values are equal?
+
+Note: I may be getting confused by your indentation. I think I am still parsing
+the `y` definition. Is this supposed to be part of a definition after that? If
+so, the problem may be a bit before the equals sign. I need all definitions to
+be indented exactly the same amount, so the problem may be that this new
+definition has too many spaces in front of it.
+
+> x
+UserId ("whats up") : UserId
+> toString (UserId idString) = idString
+<function> : UserId -> String
+> y = toString x
+"whats up" : String
+> 
+
+```
+Learning:
+https://elm-radio.com/episode/primitive-obsession/
+https://elm-radio.com/episode/intro-to-opaque-types/
+
+```
+> x = [ "a", "b", "c"]
+["a","b","c"] : List String
+> import List.Extra exposing (getAt)
+> y = case getAt 0 x of
+|   Nothing -> ""
+|   Just char -> char
+|   
+"a" : String
+> 
+```
+Update an element of a List:
+https://package.elm-lang.org/packages/elm-community/list-extra/latest/List-Extra#updateIf
+
+
+
 
 # Diary
 
