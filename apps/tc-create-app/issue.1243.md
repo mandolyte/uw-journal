@@ -72,3 +72,7 @@ _next @ useFile.js:114
 xhr.js:166          POST https://qa.door43.org/api/v1/repos/Es-419_gl/es-419_tn/contents/en_tn_66-JUD.tsv 422 (Unprocessable Entity)
 ```
 
+Outcome:
+1. my user branch is created
+2. the file for Jude is created, but it is empty
+
