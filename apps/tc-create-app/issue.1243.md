@@ -192,3 +192,50 @@ export const ensureContent = async ({
 };
 ```
 
+This:
+```js
+      const _payload = payload({
+        new_branch: branch, content, message, author,
+      });
+```
+
+Runs: 
+```js
+export const payload = ({
+  branch, new_branch, content, message, author: { email, username }, sha,
+}: PayloadOptions): object => ({
+  branch,
+  new_branch,
+  content: base64.encode(utf8.encode(content || '')),
+  message,
+  author: {
+    email: email,
+    name: username,
+  },
+  sha,
+});
+
+```
+
+noticed that no sha is being passed. But per:
+https://qa.door43.org/api/swagger#/repository/repoCreateFile
+sha isn't even a valid parameter
+
+Added some console logging:
+```js
+      const _payload = payload({
+        new_branch: branch, content, message, author,
+      });
+      console.log("Payload will be:", _payload)
+      console.log("url:",url)
+      console.log("config:", config)
+      const response = await post({
+        url, payload: _payload, config,
+      });
+      contentObject = response.content;
+    }
+  } catch (error) {
+    throw new Error('Error creating file. Error:\n'+error);
+  };
+```
+
