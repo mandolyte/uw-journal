@@ -262,12 +262,12 @@ Note that tc-create will use "en" for the language Id, since that is the name of
 - body: This is a JSON object and is the payload for the POST. See Appendix B for the value to copy and paste into this textbox.
 
 Picture:
-![[Pasted image 20220425105042.png]]
+![../../images/Pasted-image-20220425105042.png](../../images/Pasted-image-20220425105042.png)
 
 In this test, I authorized using "Basic Authorization" - which is could be different than what tc-create is doing... 
 
 Finally, click the execute button. Result snippet:
-![[Pasted image 20220425111635.png]]
+![Pasted image 20220425111635.png](../../images/Pasted-image-20220425111635.png)
 
 I had added the dates parameter but it isn't needed.
 
