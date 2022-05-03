@@ -16,3 +16,6 @@ A repo of all my *unfoldingWord.org* notes -- at least going forward from July 2
 | 2021-01-29 | Installed Calendar and Adv table plugins |
 | 2021-11-01 | Re-organized folders                     |
 
+# Errata
+Understanding the React unique key requirement:
+https://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js
