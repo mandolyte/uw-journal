@@ -3,7 +3,8 @@
 ## datatable-translatable
 
 Refs:
-- https://www.youtube.com/watch?v=3GY0j-a5h5o
+- youtube video walkthru to upgrade  https://www.youtube.com/watch?v=3GY0j-a5h5o
+- current styleguidist demo at: https://datatable-translatable.netlify.app/
 
 **Questions**
 1. is there a newer version of mui-datatables? Yes. https://www.npmjs.com/package/mui-datatables is at 4.2.2, updated a month ago in April, 2022. In the compatibility chart, it shows that it must be at v4 or above.
@@ -29,6 +30,7 @@ Here is the relevant info in package.json (lines elided around lines of interest
 
 ## 2022-05-09
 
+### Yarn Install work
 Looks like `@mui/core` is deprecated. However, in the v5 sandbox demos, they don't include it. Thus perhaps the component include what they need and I don't need to include core at all. *Note: says it was replaced by @mui-base. See https://www.npmjs.com/package/@mui/core*
 
 icons package is now: @mui/icons-material and is at v5.6.2
@@ -71,3 +73,11 @@ This finally compiled with yarn install:
   },
 ```
 
+### Yarn Start work
+
+Looks like I need to add @emotion/react to package.json; added:
+```
+    "@emotion/react": "11.9.0",
+```
+
+Now I'm getting errors from markdown-translatable...
