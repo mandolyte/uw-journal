@@ -1,7 +1,23 @@
 # Mui v5
+
+## General Upgrade Steps
+1. Requires React 17 or 18
+2. All React packages must be appropriately recent version
+3. A commonly used package - MUI Tables - must be version 4+
+4. All the "@material-ui" imports must be changed to use "@mui". The various modules in the package have been re-organized. A mapping is below.
+
+
+**MUI Mapping**
+
+| From        | To          |
+| ----------- | ----------- |
+| @material-ui/core | @mui/material |
+| Paragraph | Text |
+
+
+
 ## Initial look using datatable-translatable
 Refs:
-- youtube video walkthru to upgrade  https://www.youtube.com/watch?v=3GY0j-a5h5o
 - current styleguidist demo at: https://datatable-translatable.netlify.app/
 
 **Questions**
