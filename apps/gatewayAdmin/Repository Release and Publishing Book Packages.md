@@ -14,7 +14,7 @@ There are two types of resources:
 
 Resources that are book specific have a filename that includes the bookId of the book. For example, the Translation Word List for the book of Matthew is `twl_MAT.tsv`.
 
-Translation Words (TW) and Translation Academy (TA) are the resources that are shared across book, i.e., these are not book specific. These are also 1-to-many:
+Translation Words (TW) and Translation Academy (TA) are the resources that are shared across book packages, i.e., these are not book specific. These are also 1-to-many:
 - The TW articles for a book are listed in the Translation Word List resource for that book.
 - The TA articles for a book are listed in the Support Reference column in the Translation Notes resource.
 
@@ -23,12 +23,12 @@ Resources are released as they are reviewed and approved. A release is a snapsho
 ## Problem Statement
 The concept of a *published* book package cuts across the resource repositories. The requirement is to:
 - Identify the approved content for a book package.
-- Approved content will be in a release for a resource repository, never in the master branch, which is always subject to change.
+- Approved content will be referenced in a release for a resource repository.
 
 So the problem to solve is how to enable a project administrator identify, save, and maintain the set of files for a book bookage and make it available for use.
 
 ## Proposed Solution
-For a given project (i.e., a given organization and language), create a new type of repository in which to maintain publish book package data. Below find:
+For a given project (i.e., a given organization and language), create a new type of repository in which to maintain published book package data. Below find:
 - a brief example
 - a detailed example
 - validations required to ensure the integrity of the BP
@@ -36,7 +36,7 @@ For a given project (i.e., a given organization and language), create a new type
 ### Brief Example
 Suppose the standard repo name to contain published BP data is the language ID and the resource ID "pub". Then for for uW English, the published BP repo would be `unfoldingWord/en_pub`.
 
-This repository would contain 66 files, one for each book of the bible. Each file would be, say, JSON format and for each resource would have a "partial" URL to the released resource (if available). *Note, in the below we assume JSON format. But it could be TSV as well.*
+This repository would contain 66 files, one for each book of the bible. Each file would be, say, JSON format and for each resource would have a "partial" URL (or Resource Container URIs?) to the released resource (if available). *Note, in the below we assume JSON format. But it could be TSV as well.*
 
 ### Detailed Example
 Suppose the uW team determined that they wanted to publish the book package for Titus. Further, let's suppose that of all the resources possible for a book package, they only wished to publish the following:
