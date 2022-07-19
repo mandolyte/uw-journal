@@ -1,5 +1,17 @@
 # Diary
 
+## 2022-07-14
+
+**Issue 119 # Release options dialog**
+Here is the text for the issue:
+```
+release notes - markdown?  
+release stage: prod, pre-prod (ask [@richmahn](https://github.com/richmahn) about what stages are useful)
+```
+Swagger API for creating a release:
+https://qa.door43.org/api/swagger#/repository/repoCreateRelease
+
+
 ## 2021-12-10 Card Refresh on Org/Lang Change
 
 Here is org eo_gl with only one repo, en_glt created.
