@@ -8,6 +8,9 @@ A repo of all my *unfoldingWord.org* notes -- at least going forward from July 2
 *tc-create Zenhub*: [link](https://github.com/unfoldingWord/tc-create-app#workspaces/tc-create-workspace-5f049cdbfa88090016bf043e/board?repos=93856410,122679395,180812604,191973535,196089755,179390258,209859478,265372377,309771140)
 *Reimbursement Link*: https://docs.google.com/spreadsheets/d/1jDepYF0qt57eTGrjyK6_x-jsQOMNW1pUPN0jkrtczNk/edit#gid=998173018
 
+*New TSV Spec:* https://forum.door43.org/t/parascriptural-tab-separated-value-format-specification-v2/870
+
+*Swagger:* https://qa.door43.org/api/swagger#/
 
 # History
 
