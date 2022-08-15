@@ -20,20 +20,11 @@ aTo those who are called, bbeloved in God the Father and ckept for2 Jesus Christ
 2 May dmercy, epeace, and love be multiplied to you.
 ```
 
-Here is what I'll use in the playground:
-```
-JUDE{.book}
+I created this repo to test this:
+https://github.com/mandolyte/experiment-djot
 
-Greeting{.heading}
+See the folder "jude", where:
+- `jude.djot`: this is the markdown file with djot additions
+- `run_pandoc.sh`: this the script to run the pandoc command to create the `jude.html` file
+- `styles.css`: a little CSS just to confirm things are working as they should
 
-1{.verse} 
-Jude, a servant[^1]{.footnote} of Jesus Christ and brother of James,
-[^a]{.reference}To those who are called, 
-[^b]{.reference}beloved in God the Father and
-[^c]{.reference}kept
-for[^2]{.footnote} Jesus Christ:
-
-2{.verse} May 
-[^d]{.reference}mercy, 
-[^e]{.reference}peace, and love be multiplied to you.
-```
