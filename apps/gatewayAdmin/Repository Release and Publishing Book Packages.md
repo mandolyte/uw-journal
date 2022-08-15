@@ -74,6 +74,10 @@ It's content might be:
 }
 ```
 
+Once the content was ready, it would be written to the master branch of `en_pub`. It may be that multiple book packages are being done at the time. When all are done, then the `en_pub` repository must be released itself.
+
+Releasing the book package repository will lock all the versions for all the book packages in an easy to find location.
+
 
 ### Validations
 To ensure the integrity of the published book package, the following validations may be considered:
