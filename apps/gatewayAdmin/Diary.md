@@ -1,5 +1,69 @@
 # Diary
 
+## 2022-08-29
+
+This org might be useful for testing the book package release page:
+https://qa.door43.org/TestRepo
+
+Branch: automate-some-things
+
+Notes:
+
+1. did a git pull on the branch
+2. yarn, then yarn dev
+3. started http://localhost:3000
+4. logged in
+5. had to do a layout reset since all the cards where jumbled up on upper left corner
+6. clicked account settings page and selected org=TestRepo and lang=hi
+7. No resources have releases
+8. TQ is in the old markdown format... I'll stay from it.
+9. No OBS stuff
+10. Go to the Release Book Packages page
+11. Todo: 
+	1. space between Select All and Select None buttons
+	2. Paper subtitle says Release Repository - should be Release Book Package
+
+Test 1:
+- pick book Titus and LT and ST
+- Production as release type
+- Test 1 as release name
+- This as release notes:
+```
+# Heading 1
+
+## Heading 2
+
+Here are some release notes
+```
+
+- Click to Release Book Packages
+
+Results:
+- created release v6 for hi_glt and v5 for hi_gst
+- These versions were taken from the manifest in master branch
+
+Test 2:
+- Pick Titus and the TN resource (which has v47.2 before release)
+- It published release v47.3
+
+I have made an argument for using simple incrementing integers and posted this in zulip ([[On Versioning]]).
+
+
+
+## 2022-08-24
+
+**Step 1**
+
+Attempt to setup a test case.
+- using https://qa.door43.org/es-419_gl
+- es-419_twl: appears that es-419 already has way too much released to be a good starting point
+
+**Step 2**
+
+Went to the page https://qa.door43.org/org/ru_gl/teams and joined the "owners" group. Since I'm an admin in QA, this worked. Now ru_gl shows in my orglist.
+
+
+
 ## 2022-07-14
 
 **Issue 119 # Release options dialog**
