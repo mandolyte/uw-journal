@@ -32,3 +32,13 @@ The metadata describes the contents of the burrito, including directory structur
 3. Parascriptural - includes anything indexed by book, chapter, verse that is not Scripture, e.g. commentaries or syntactic notes.
 4. Peripheral - any other resource related to Scripture
 
+*They come in different **flavors**:*
+Burritos exist in a number of flavors. Flavors are distinguished by their FlavorType and reference system.
+
+A reference system identifies the way that a resource is referenced and navigated. For instance, a resource may use BCV (book, chapter, verse).
+
+*Burritos have ingredients:*
+Burritos contain ingredients. An ingredient is a file-like resource with a mime-type and, optionally, a scope or role.
+
+This specification places no constraints on the file layout used for ingredients but strongly recommends they be placed in a ingredients/ directory. It is further recommended that application-specific files be placed within a sub-directory under this.
+
