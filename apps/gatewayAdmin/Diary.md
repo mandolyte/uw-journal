@@ -1,5 +1,29 @@
 # Diary
 
+## 2022-09-07
+
+PR:
+
+**Notes**
+
+1. go to QA es-419_gl
+2. both LT and ST have one release each, with only Ruth and Titus.
+3. TN has one release with 8 books.
+
+Let's see what happens when I try to release only Titus in the above three resources.
+Each release currently matches master exactly. No changes have been merged into master since the release.
+
+In this test, all releases three releases were done but had all the files from the prior release included.
+
+Removed all those releases so that the sole release was present.
+
+Next created branch release_v1 with only Titus material -- in TN only.
+
+Next use gA to just release the TN for Titus.
+
+Not working... always seems to go to master branch for the release.
+
+
 ## 2022-08-29
 
 This org might be useful for testing the book package release page:
