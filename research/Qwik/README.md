@@ -32,4 +32,7 @@ Docs
 	2. useDocumentHead: https://qwik.builder.io/qwikcity/api/use-document-head/
 	3. useLocation: https://qwik.builder.io/qwikcity/api/use-location/
 9. Details on using Netlify [here](https://qwik.builder.io/qwikcity/adaptors/netlify-edge/)
-10. 
+10. Docs do not mention yarn at all. So probably safer to use npm as they do.
+11. They use Typescript all the time... as we should :-)
+
+
