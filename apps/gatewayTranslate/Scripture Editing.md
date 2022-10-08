@@ -1,5 +1,15 @@
 # Scripture Editing
 
+## 2022-10-08
+
+Link to "standalone Epitelete" info:
+https://github.com/Proskomma/epitelete#standalone-mode
+
+Epitelete API:
+https://github.com/Proskomma/epitelete/blob/main/docs/API.md
+
+
+
 ## 2022-09-14
 
 Netlify: https://perf-html-editor-app.netlify.app/
