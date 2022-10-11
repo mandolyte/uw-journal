@@ -1,5 +1,26 @@
 # Scripture Editing
 
+## 2022-10-11
+
+### Layers of Goals
+
+- Resuability by the OCE community (see note 1)
+- Usable by multiple uW applications (see note 2)
+
+### Notes
+
+1. On Resusability by the OCE community:
+	- Based on common data formats (see note 3), where applicable.
+	- Framework independence
+
+2. sdfsdf
+3. On common data formats. As much as possible, data formats that can be widely used by any programming language; priority on human readability (doesn't need a piece of special software to "view" it) and, perhaps even human editibility. Such data formats include at present:
+	- Markdown
+	- USFM
+	- CSV/TSV
+	- JSON
+
+
 ## 2022-09-14
 
 Netlify: https://perf-html-editor-app.netlify.app/
