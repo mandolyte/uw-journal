@@ -36,7 +36,7 @@ Returns: true or false.
 
 Exception: on any system failures.
 
-Code: https://github.com/unfoldingWord/dcs-js/blob/master/apis/repository-api.ts#L18344
+Code: https://github.com/unfoldingWord/dcs-js/blob/master/apis/repository-api.ts#L18344 or https://github.com/unfoldingWord/dcs-js/blob/master/apis/repository-api.ts#L11825
 
 ### createUserBranch
 
