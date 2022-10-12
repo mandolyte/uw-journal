@@ -36,6 +36,8 @@ Returns: true or false.
 
 Exception: on any system failures.
 
+Code: https://github.com/unfoldingWord/dcs-js/blob/master/apis/repository-api.ts#L18344
+
 ### createUserBranch
 
 This function will create the user branch above if it does not exist.
@@ -45,6 +47,8 @@ Parameters: bookId and username
 Returns: true (if created ok) or false (if create fails; also throws exception)
 
 Exception: on any create failure
+
+Code: https://github.com/unfoldingWord/dcs-js/blob/master/apis/repository-api.ts#L1567
 
 ### saveUserBranch
 
@@ -59,3 +63,7 @@ Parameters:
 Returns: true or false (on failure to save)
 
 Exception: on failure to save an exception will be thrown
+
+Code: https://github.com/unfoldingWord/dcs-js/blob/master/apis/repository-api.ts#L18759
+
+
