@@ -16,6 +16,12 @@ Articles
 Docs
 - Qwik City https://qwik.builder.io/qwikcity/overview/
 
+## 2022-10-14
+
+My personal repo where I do some learning, experimenting:
+https://github.com/mandolyte/experiment-qwik
+
+
 
 ## 2022-10-08
 
