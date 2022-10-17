@@ -9,6 +9,10 @@ Font detection: https://font-detect-rhl.netlify.app/
 
 Graphite fonts: https://software.sil.org/fonts
 
+How to build RTL apps:
+- [https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/](https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/) 
+- [https://hacks.mozilla.org/2015/10/building-rtl-aware-web-apps-websites-part-2/](https://hacks.mozilla.org/2015/10/building-rtl-aware-web-apps-websites-part-2/)
+
 ## To Do
 
 1. Contact Alex Agha-Khan and ask these interview questions in Appendix A
