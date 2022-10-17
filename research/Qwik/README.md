@@ -19,6 +19,16 @@ Docs
 To create a qwik online starter (pretty cool):
 https://qwik.new/
 
+## 2022-10-17
+
+This gh query: https://github.com/topics/qwik
+will show a number of repos. Some may have pre-built components.
+
+An autocomplete component:
+https://github.com/phongnn/qwik-select
+
+
+
 ## 2022-10-14
 
 My personal repo where I do some learning, experimenting:
