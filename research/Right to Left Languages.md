@@ -2,6 +2,9 @@
 
 ## Links
 
+Font playground:
+https://simple-usfm-alignment-prototype.netlify.app/
+
 Document deliverable:
 https://docs.google.com/document/d/1aOiyL-98j-ldFG4sTAvvEWJEkSiV24d0WAmxYl7VKU8/edit#
 
@@ -24,9 +27,27 @@ How to build RTL apps:
 
 ### Pre-interview question
 
--   What RtLs can you read?
--   What RtLs can you type?
-    
+-   What RtLs can you read? Farsi, Arabic, Urdu, Dari
+-   What RtLs can you type? Same
+
+Classical Arabic is like calligrophy. They go into the above line and into the line below.
+
+Farsi has no diacritics.
+
+Arabic words are written on top of each other. Both vowels and consanants use diacritics.
+
+Cursor needs to be on the right. Not left.
+
+Does the browser support the language, keyboard, and font and size.
+
+"aap" - three letter sequence Urdo
+
+Question: is there a keyboard viewer
+
+Urdo has a "beloved" font. 
+
+Farsi is simplistic.
+
 
 ### Interview questions
 
