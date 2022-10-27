@@ -110,11 +110,11 @@ In the function DataTable, we find:
 ```
 
 And further, the filter options is actually what we need for the dropdown list. Thus we are all set. Snippet:
-![snippet](./images/Pasted_image_20220518093318.png)
+![snippet](Pasted_image_20220518093318.png)
 
 
 When the add row button is clicked, this non-editable form is presented. You can only cancel or add. Once added you can edit the row content as needed.
-![snippet](./images/Pasted_image_20220518095838.png)
+![snippet](Pasted_image_20220518095838.png)
 
 
 
