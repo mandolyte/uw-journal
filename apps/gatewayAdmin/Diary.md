@@ -1,5 +1,15 @@
 # Diary
 
+## 2022-11-15
+
+Steps to test:
+1. create a new org in qa, say 'cvt-9-7'
+2. fork uw/en_tn into it
+![[Pasted image 20221115071145.png]]
+3. Login with gA and use it:
+   ![[Pasted image 20221115071445.png]]
+
+
 ## 2022-09-07
 
 PR:
