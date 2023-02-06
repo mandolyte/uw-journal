@@ -3,6 +3,9 @@
 Main page:
 https://app.netlify.com/teams/unfoldingword-hvaaits/overview
 
+Env vars for gateway edit:
+https://app.netlify.com/sites/gateway-edit/settings/deploys#environment
+
 Env vars for gateway admin:
 https://app.netlify.com/sites/gateway-admin/settings/deploys#environment
 
