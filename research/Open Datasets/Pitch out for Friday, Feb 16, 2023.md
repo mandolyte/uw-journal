@@ -1,6 +1,6 @@
 # Open Datasets
 
-Started with the STEPBible data [here](https://github.com/STEPBible/STEPBible-Data/blob/master/TIPNR%20-%20Translators%20Individualised%20Proper%20Names%20with%20all%20References%20-%20STEPBible.org%20CC%20BY.txt)
+Started with the STEPBible data [here](https://github.com/STEPBible/STEPBible-Data)
 
 ... which:
 - is a TSV file, 
@@ -68,12 +68,16 @@ sqlite>
 
 ---
 Compared to the JSON version of the file [here](https://github.com/PatristicTextArchive/tipnr_data/blob/master/tipnr_persons.json)
-which is nearly 4MB in size!
+which is nearly 4MB in size
 
 ![[Pasted image 20230216122042.png]]
 
 ---
-So the Sqlite3 database is the smallest and it performs well. But how can it made useful to a web app? There are some pointers in that direction...
+So the Sqlite3 database is the smallest and it performs well. 
+
+But how can it made useful to a web app? 
+
+There are some pointers in that direction...
 
 ---
 
@@ -95,3 +99,10 @@ And finally there is the OPFS Explorer for developer types, a [Chrome Extension]
 An example that get part way there is:
 - Project at https://github.com/rhashimoto/wa-sqlite
 - Demo at https://rhashimoto.github.io/wa-sqlite/demo/
+- Google demo shows OPFS: https://sqlite-wasm-opfs.glitch.me/
+
+---
+
+*Stumbling Blocks*
+- WASM and OPFS are relatively new and examples focus on plain HTML and Javascript and hard to translate into React or other modern frameworks
+- Have yet to find a "good" example that uses ESM, but some are working on it ([example](https://github.com/overtone-app/sqlite-wasm-esm))
