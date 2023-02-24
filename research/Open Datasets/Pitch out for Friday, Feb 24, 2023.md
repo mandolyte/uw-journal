@@ -7,7 +7,7 @@ Goal: Explore Open Datasets for "places" data
 ## Datasets used this week
 - StepBible TIPNR - place data only, not person data
 - Pleiades - historical place data (secular)
-- unfoldingWord - Translation Word Lists and versification data
+- unfoldingWord - Translation Word Lists, Translation Words, versification data
 - Open Bible Geocoding - linked location/place data
 
 
@@ -17,7 +17,7 @@ Goal: Explore Open Datasets for "places" data
 ## Methodology 
 
 - Transform data to tabular (if in JSON)
-- Import into Sqlite 
+- Import into Sqlite3 
 - Iterate to evaluate key data to connect disparate datasets
 - Clean and normalize the data
 - Develop SQL queries to establish/verify linkages
@@ -77,5 +77,5 @@ Show linkages between Step Bible and Open Bible Geo Data.
 
 ## Possible Next Steps
 
-- Many of these datasets also have people data, but would take a similar amount of work to do the "alignment"
+- Many of these datasets also have people data, but would take some amount of work "align" the datasets
 - Explore use of Sqlite3 WASM & OPFS to distribute these  datasets
