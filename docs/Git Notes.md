@@ -1,5 +1,9 @@
 # Git Notes
 
+## add other repo branch into my repo branch
+
+https://stackoverflow.com/questions/21353656/merge-git-repo-into-branch-of-another-repo
+
 ## set-branch script
 
 ```sh
