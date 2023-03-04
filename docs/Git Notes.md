@@ -6,18 +6,30 @@ https://stackoverflow.com/questions/21353656/merge-git-repo-into-branch-of-anoth
 
 You can't merge a repository into a branch. You can merge a branch from another repository into a branch in your local repository. Assuming that you have two repositories, foo and bar both located in your current directory:
 
+```
 $ ls
 foo bar
-Change into the foo repository:
+```
 
+Change into the foo repository:
+```
 $ cd foo
+```
+
 Add the bar repository as a remote and fetch it:
 
+```
 $ git remote add bar ../bar
 $ git remote update
+```
+
+
 Create a new branch baz in the foo repository based on whatever your current branch is:
 
+```
 $ git switch -c baz
+```
+
 Merge branch somebranch from the bar repository into the current branch:
 
 $ git merge --allow-unrelated-histories bar/somebranch
