@@ -1,21 +1,16 @@
-# gatewayAdmin
-
-## Links
-
-Drive folder with links and info:
-https://drive.google.com/drive/u/1/folders/1xBTa_2papB5AyUkaALlFSXrjEbDdZUKw
+# Links
 
 Here are relevant links:
-- develop: https://develop--gateway-admin.netlify.app/
-- "staging": https://develop--gateway-admin.netlify.app/?server=prod
-- prod: https://gateway-admin.netlify.app/
+
+- develop: https://develop--gateway-translate.netlify.app/
+- "staging": https://develop--gateway-translate.netlify.app/?server=prod
+- prod: https://gateway-translate.netlify.app/
 
 Here are links to the underlying github branches:
-- prod: https://github.com/unfoldingWord/gateway-admin/tree/main
-- develop: https://github.com/unfoldingWord/gateway-admin (now the default branch)
-- release branch for v0.9.0: https://github.com/unfoldingWord/gateway-admin/tree/release-v0.9.0
-- release: https://github.com/unfoldingWord/gateway-admin/releases/tag/v0.9.0
-https://gateway-admin.netlify.app/
+- prod: https://github.com/unfoldingWord/gateway-translate/tree/main
+- develop: https://github.com/unfoldingWord/gateway-translate (now the default branch)
+- release branch for v0.9.0: https://github.com/unfoldingWord/gateway-translate/tree/release-v0.9.0
+- release: https://github.com/unfoldingWord/gateway-translate/releases/tag/v0.9.0
 
 ## Steps to Release to Production Use
 
@@ -35,7 +30,7 @@ c. Release notes are prepared
  
 1. create a release branch from develop, named by the release semver
 2. merge release branch into main
-3. tag develop: git tag <semver> && git push --tags
+3. tag develop: `git tag <semver> && git push --tags`
 4. cut a release from the release branch
 5. add to the release the notes and any assets
 
@@ -62,7 +57,7 @@ To incorporate bug fix into develop, do:
   - merge into develop
 
 
-Prerequisites and One-Time Tasks
+*Prerequisites and One-Time Tasks*
 
 1. In addition to the "main" branch, create a "develop" branch.
 2. Set the "develop" branch as the "default" branch.
