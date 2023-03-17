@@ -85,6 +85,57 @@ The properties of interest are:
 ```
 
 
+## On Merging
+
+This link answers the question, has it been merged:
+https://qa.door43.org/api/swagger#/repository/repoPullRequestIsMerged
+
+If the PR has not been merged, then this URL:
+https://qa.door43.org/api/v1/repos/unfoldingWord/en_ult/pulls/3346/merge
+
+will return a 404 with this message:
+```
+{
+  "errors": null,
+  "message": "The target couldn't be found.",
+  "url": "https://qa.door43.org/api/swagger"
+}
+```
+
+Hopefully, this swagger API will update my branch from master:
+https://qa.door43.org/api/swagger#/repository/repoUpdatePullRequest
+
+Looks good... results:
+
+First the URL:
+
+```
+https://qa.door43.org/api/v1/repos/unfoldingWord/en_ult/pulls/3346/update?style=merge
+```
+
+Next the curl for reference:
+
+```
+curl -X 'POST' \
+  'https://qa.door43.org/api/v1/repos/unfoldingWord/en_ult/pulls/3346/update?style=merge' \
+  -H 'accept: application/json' \
+  -H 'authorization: Basic Y2VjaWwubmV3OjM1XkhoRF5IRiRkKiNOKkE=' \
+  -d ''
+```
+
+The status returned was a 500; and message returned was:
+
+```
+{
+  "message": "HeadBranch of PR 3346 is up to date",
+  "url": "https://qa.door43.org/api/swagger"
+}
+```
+
+Which is what I'd expect in this case since there no commits to master since I created the above PR. So I'll make a change and retry. I made a PR: `gt-DEU-superdav42 #3347` and merged it. Now there should be an update to make to my branch.
+
+This time the status returned was a 200; and there was no message returned.
+
 
 
 
