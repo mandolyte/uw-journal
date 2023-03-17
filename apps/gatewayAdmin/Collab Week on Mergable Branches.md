@@ -165,17 +165,13 @@ Here is the body for the post for my first attempt:
   "delete_branch_after_merge": false,
   "force_merge": false,
   "head_commit_id": "0006fcc95e0d3f36090a6fefe6ad0abed15a36b3",
-  "merge_when_checks_succeed": true
+  "merge_when_checks_succeed": false
 }
 ```
 
 Notice that there is a `head_commit_id`, so maybe `MergeCommitID` is supposed to be `master`??
 
-The above returned a 201.. and did *not* merge my PR. However, on the PR page is this message:
-`cecil.new scheduled this pull request to auto merge when all checks succeed 20 seconds ago`.
-
-So maybe it will succeed in the future?? It now says `cecil.new scheduled this pull request to auto merge when all checks succeed 3 minutes ago.`
-
+Merge succeed: https://qa.door43.org/unfoldingWord/en_ult/pulls/3346
 
 
 # Appendix A
