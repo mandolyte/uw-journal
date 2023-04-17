@@ -33,6 +33,7 @@ c. Release notes are prepared
 3. tag develop: `git tag <semver> && git push --tags`
 4. cut a release from the release branch
 5. add to the release the notes and any assets
+6. verify Netlify links for main (production) and develop are working
 
 **Expected Outcome**
 

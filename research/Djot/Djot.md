@@ -3,7 +3,8 @@
 Links: 
 - Playground: https://djot.net/playground/
 - Syntax Specification: https://htmlpreview.github.io/?https://github.com/jgm/djot/blob/master/doc/syntax.html#reference-link-definition
-- Repo: https://github.com/jgm/djot (note: the readme has some basic info)
+- Repo: Lua Version https://github.com/jgm/djot (note: the readme has some basic info)
+- Repo: Js/Ts Version https://github.com/jgm/djot.js
 - Cheatsheet: https://github.com/jgm/djot/blob/main/doc/cheatsheet.md
 
 
