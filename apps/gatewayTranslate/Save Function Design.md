@@ -65,5 +65,7 @@ Returns: true or false (on failure to save)
 Exception: on failure to save an exception will be thrown
 
 Code: https://github.com/unfoldingWord/dcs-js/blob/master/apis/repository-api.ts#L18759
+https://github.com/unfoldingWord/dcs-js/blob/master/documentation/classes/RepositoryApi.md#repoupdatefile
 
+**repoUpdateFile**(`owner`, `repo`, `filepath`, `body`, `options?`): `Promise`<`AxiosResponse`<[`FileResponse`](https://github.com/unfoldingWord/dcs-js/blob/master/documentation/interfaces/FileResponse.md)>>
 
