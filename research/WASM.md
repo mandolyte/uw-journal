@@ -33,8 +33,11 @@ Next I copied main.go from the second-function folder.
 
 Since this is pure code, not intended access browser features, this will be a plain old Go program, which takes a string and returns an array. So modifying the main.go as needed.
 
+So far, the above is not working. Appears to assume that Rust is being used.
 
-
+#todo
+https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_Wasm
+This link has a detailed use of Rust to make an NPM component. It may be possible to insert Go generated WASM code into the steps outlined.
 
 
 
