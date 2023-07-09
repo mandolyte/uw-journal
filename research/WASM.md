@@ -35,9 +35,14 @@ Since this is pure code, not intended access browser features, this will be a pl
 
 So far, the above is not working. Appears to assume that Rust is being used.
 
-#todo
+
 https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_Wasm
-This link has a detailed use of Rust to make an NPM component. It may be possible to insert Go generated WASM code into the steps outlined.
+This link has a detailed use of Rust to make an NPM component. It may be possible to insert Go generated WASM code into the steps outlined. I went thru this tutorial without any issues.
+
+Now this tutorial using Go: https://golangbot.com/webassembly-using-go/
+**Results:** The wasm code is wrapped in order to be used by a Javascript application. So perhaps the route forward to making an NPM package is to write a wrapper (perhaps a class like Sqlite3?) and then use NPM to deploy that wrapper. 
+
+#todo study the Rust example and compare with Go example and see if I can apply the approach to Go that Rust is using.
 
 
 
