@@ -16,6 +16,27 @@ from: https://blog.suborbital.dev/foundations-wasm-in-golang-is-fantastic
 I completed  much of the tutorial. The examples are focused on application level use of WASM.
 But instructive nonetheless. So I need to keep looking...
 
+# first-component
+
+Using notes in appendix C.
+
+First, wasm-pack init is deprecated... probably can skip this step. Here is the output:
+```text
+$ wasm-pack init first-component
+wasm-pack init is deprecated, consider using wasm-pack build
+Error: crate directory is missing a `Cargo.toml` file; is `first-component` the wrong directory?
+Caused by: crate directory is missing a `Cargo.toml` file; is `first-component` the wrong directory?
+```
+Makes me wonder if this is a Rust only tool?? It did not actually create a folder. So I created it myself.
+
+Next I copied main.go from the second-function folder.
+
+Since this is pure code, not intended access browser features, this will be a plain old Go program, which takes a string and returns an array. So modifying the main.go as needed.
+
+
+
+
+
 
 
 # Appendix A
@@ -32,6 +53,7 @@ Here are the steps on how to deploy a wasm component to npm:
 4. Create a build script that compiles your wasm component into a format that can be deployed to npm.
 5. Run the npm publish command to deploy your component to the npm registry.
 
+***wasm-bindgen does not exist!*
 Here is an example of a package.json file for a wasm component:
 ```json
 {
@@ -120,3 +142,44 @@ func main() {
   mypackage.PrintHelloWorld()
 } 
 ```
+
+# Appendix  C - publish wasm to npm
+
+Prompt: publish wasm to npm
+
+Sure. Here are the steps on how to publish a WebAssembly (wasm) to npm:
+- Install the `wasm-pack` tool.
+- Initialize a wasm-pack project.
+- Write your wasm code.
+- Compile your wasm code.
+- Create an npm package.
+- Publish your npm package.
+
+Here are the detailed steps:
+
+Install the `wasm-pack` tool:
+> npm install -g wasm-pack 
+
+Initialize a wasm-pack project:
+> wasm-pack init my-wasm-project 
+
+Write your wasm code.
+
+You can write your wasm code in any language that supports WebAssembly, such as Rust, C++, or AssemblyScript.
+
+Compile your wasm code:
+> wasm-pack build 
+
+
+This will compile your wasm code and generate a `pkg` directory.
+
+Create an npm package:
+> npm init 
+
+This will create a `package.json` file.
+
+Publish your npm package:
+> npm publish 
+
+This will publish your npm package to the npm registry.
+Once you have published your npm package, other JavaScript developers can install it using the `npm install` command.
