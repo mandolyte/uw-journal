@@ -5,45 +5,70 @@ Write a component in Go that:
 - published to NPM
 - imported into a Javascript application
 
+# To Do
+
+This uses rollup to package the wasm:
+https://stackoverflow.com/questions/75989746/how-to-export-wasm-from-an-npm-package-in-a-way-that-react-js-would-be-able-to-u
+
+This has some ideas that might work:
+https://codeburst.io/getting-started-with-react-and-webassembly-using-hooks-441818c91608
+
+This might work using React with some other of the ideas above:
+https://github.com/mbasso/react-wasm
+
 # Links
+
+Notice this proposal!
+https://github.com/WebAssembly/esm-integration/tree/main/proposals/esm-integration
+(referenced in https://dev.to/sendilkumarn/loading-wasm-as-esm-in-nodejs-2gdb)
 
 This one seems to focus on what I am interested in
 https://github.com/sanathkr/go-npm
 
-# Example 1
+This one has a section about publishing to NPM:
+https://david.coffee/react-native-wasm-golang/
+
+# Tutorial
 from: https://blog.suborbital.dev/foundations-wasm-in-golang-is-fantastic
 
 I completed  much of the tutorial. The examples are focused on application level use of WASM.
 But instructive nonetheless. So I need to keep looking...
 
-# first-component
+# Making a Component
 
-Using notes in appendix C.
+A lot of tweaks were made - see repo `experiment-wasm` in the `pretty-print-go-wasm` folder.
+- added babel config
+- patched the `prepublishOnly` script to force how I wanted the "dist" folder to look.
 
-First, wasm-pack init is deprecated... probably can skip this step. Here is the output:
-```text
-$ wasm-pack init first-component
-wasm-pack init is deprecated, consider using wasm-pack build
-Error: crate directory is missing a `Cargo.toml` file; is `first-component` the wrong directory?
-Caused by: crate directory is missing a `Cargo.toml` file; is `first-component` the wrong directory?
+I am getting this error:
 ```
-Makes me wonder if this is a Rust only tool?? It did not actually create a folder. So I created it myself.
+Error: globalThis.crypto is not available, polyfill required (crypto.getRandomValues only)
+```
 
-Next I copied main.go from the second-function folder.
+After some searches, trying the solution in second link above, namely:
 
-Since this is pure code, not intended access browser features, this will be a plain old Go program, which takes a string and returns an array. So modifying the main.go as needed.
+```
+import getRandomValues from "polyfill-crypto.getrandomvalues";
+if (!globalThis.crypto) {
+  globalThis.crypto = {
+    getRandomValues,
+  };
+}
+```
+This is a modification to Go's wasm file.
 
-So far, the above is not working. Appears to assume that Rust is being used.
+*Got past that...*
 
+Next error: 
+```
+error - unhandledRejection: TypeError: _wasm_exec.default is not a constructor
+```
 
-https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_Wasm
-This link has a detailed use of Rust to make an NPM component. It may be possible to insert Go generated WASM code into the steps outlined. I went thru this tutorial without any issues.
+Advice in stack overflow at https://stackoverflow.com/questions/42652423/error-default-is-not-a-constructor is to do this:
 
-Now this tutorial using Go: https://golangbot.com/webassembly-using-go/
-**Results:** The wasm code is wrapped in order to be used by a Javascript application. So perhaps the route forward to making an NPM package is to write a wrapper (perhaps a class like Sqlite3?) and then use NPM to deploy that wrapper. 
-
-#todo study the Rust example and compare with Go example and see if I can apply the approach to Go that Rust is using.
-
+```
+export default class Go
+```
 
 
 
