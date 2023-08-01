@@ -18,6 +18,9 @@ https://github.com/mbasso/react-wasm
 
 # Links
 
+This might be useful to learn from:
+https://davetayls.me/blog/2022-11-24-use-wasm-compiled-golang-functions-in-nextjs
+
 Notice this proposal!
 https://github.com/WebAssembly/esm-integration/tree/main/proposals/esm-integration
 (referenced in https://dev.to/sendilkumarn/loading-wasm-as-esm-in-nodejs-2gdb)
