@@ -9,6 +9,13 @@ Write a component in Go that:
 
 This seems to be fairly complete... cross my fingers:
 https://dev.to/royhadad/how-to-create-a-react-app-with-go-support-using-webassembly-in-under-60-seconds-4oa3
+- note that he uses a tweaked version of `wasm_exec.js` -- I need to study that since the one for tinygo gets warnings about the requires. Namely:
+
+```
+./pages/wasm_exec.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+```
+
 
 This uses rollup to package the wasm:
 https://stackoverflow.com/questions/75989746/how-to-export-wasm-from-an-npm-package-in-a-way-that-react-js-would-be-able-to-u
