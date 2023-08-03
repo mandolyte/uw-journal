@@ -7,6 +7,9 @@ Write a component in Go that:
 
 # To Do
 
+This seems to be fairly complete... cross my fingers:
+https://dev.to/royhadad/how-to-create-a-react-app-with-go-support-using-webassembly-in-under-60-seconds-4oa3
+
 This uses rollup to package the wasm:
 https://stackoverflow.com/questions/75989746/how-to-export-wasm-from-an-npm-package-in-a-way-that-react-js-would-be-able-to-u
 
