@@ -107,7 +107,7 @@ const layout = {
 };
 ```
 Here is the result:
-![Pasted image 20211104090327.png](../images/Pasted%20image%2020211104090327.png)
+![Pasted image 20211104090327.png](Pasted%20image%2020211104090327.png)
 
 ## layoutWidths and layoutHeights
 The documentation says these are arrays of arrays of numbers.

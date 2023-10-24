@@ -2,6 +2,10 @@
 
 A repo of all my *unfoldingWord.org* notes -- at least going forward from July 2020.
 
+Notes:
+1. I resigned from uW in May, 2023
+2. I'll continue this journal for my own notes
+
 # Links
 
 *Clickup*: https://app.clickup.com/8466374/home/landing
@@ -20,6 +24,8 @@ A repo of all my *unfoldingWord.org* notes -- at least going forward from July 2
 | 2021-01-29 | Switch to Obsidian to manage             |
 | 2021-01-29 | Installed Calendar and Adv table plugins |
 | 2021-11-01 | Re-organized folders                     |
+| 2023-10-24 | Re-organized files/folder to support personal use of this repo for continued journaling |
+
 
 # Errata
 Understanding the React unique key requirement:
